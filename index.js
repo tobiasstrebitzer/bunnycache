@@ -1,7 +1,7 @@
+#!/usr/bin/env node
 const { existsSync, readFileSync } = require('fs')
 const { resolve } = require('path')
 const fetch = require('node-fetch').default
-
 
 async function main() {
   const token = process.env.BUNNYCDN_TOKEN
