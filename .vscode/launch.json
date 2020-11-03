@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "bunnycache",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/index.js",
+      "args": [".cacherc.json"],
+      "env": {
+        "BUNNYCDN_TOKEN": "..."
+      }
+    }
+  ]
+}
