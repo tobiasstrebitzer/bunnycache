@@ -6,8 +6,8 @@ const fetch = require('node-fetch').default
 async function main() {
   const token = process.env.BUNNYCDN_TOKEN
   const arg = process.argv.slice(-1).pop()
-  const path = resolve(arg.endsWith('.json') ? arg : '.cacherc.json')
-  if (!existsSync(path)) { throw new Error('missing .cacherc.json') }
+  const path = resolve(arg.endsWith('.cacherc') ? arg : '.cacherc')
+  if (!existsSync(path)) { throw new Error('missing .cacherc') }
   const urls = readFileSync(path, 'utf8').split('\n').reduce((arr, line) => {
     const url = line.trim()
     if (url && !arr.includes(url)) { arr.push(url) }
